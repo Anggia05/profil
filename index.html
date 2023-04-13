@@ -8,17 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <style type="text/tailwindcss"></style>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <style>
-        .wrapper-dot {
-            gap: 8px;
-       }
-        .wrapper-dot .dot{
-            border: 1px solid white;
-            height: 8px;
-            width: 8px;
-            border-radius: 100px;
-        }
         .gradient {
             background: linear-gradient(33.65deg, #0A0A0A 13.42%, #1C1C1C 50%);
         }
@@ -31,29 +22,52 @@
             opacity: 0.1;}
         
     </style>
+    
 
 </head>
 <body class="bg-[#0E0E0E]">
-    <!-- HEADER -->
+    <!-- HEADER --> 
     <header>
-        <div class=" border-b-2 border-[#B8B8B8] container mx-auto text-[#B8B8B8] flex justify-between items-center  font-base relative z-40 justify-between ">
+        
+<nav class="">
+    <div class="flex flex-wrap items-center justify-between mx-auto container border-b-2 border-[#B8B8B8]">
+        <a href=""><img src="logo.png" alt=""></a>
+        <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 gap-5">
+            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a></li>
+            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Project</a></li>
+            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+            </ul>
+        </div>
+        <div class="flex gap-2 items-center hidden md:block  ">
+            <a class="text-slate-300" href="">Let’s talk</a>
+            <a href=""><img class="hover:bg-white" src="simbol.png" alt=""></a>
+        </div>
+    </div>
+  </nav>
+  
+        <!-- <div class="border-b-2 border-[#B8B8B8] container mx-auto text-[#B8B8B8] flex justify-between items-center  font-base relative z-40 justify-between ">
             <a href=""><img src="logo.png" alt=""></a>
             <div class="flex gap-5">
                 <a class="text-slate-300" href="">About</a>
                 <a class="text-slate-300" href="">Service</a>
                 <a class="text-slate-300" href="">Project</a>
                 <a class="text-slate-300" href="">Project</a>
-            </div>
+            </div>            
             <div class="flex gap-2 items-center">
                 <a class="text-slate-300" href="">Let’s talk</a>
                 <a href=""><img class="hover:bg-white" src="simbol.png" alt=""></a>
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- PROFIL -->
-    <p class="absolute text-[240px] font-bold right-[30rem] py-[10rem] font-nav -z-10 gradient-text ">HELLO</p>   
-        <div class="rounded-full w-[65rem] h-[65rem] bg-[#252525]  absolute -right-[28.5rem] -top-40"></div>
-    <div class="container mx-auto md:flex text-white font-nav relative z-20  justify-between">
+    <p class="absolute md:text-[240px] sm:text-[200px] font-bold md:right-[2rem] sm:top-[22rem] sm:pl-4 py-[10rem] font-nav -z-10 gradient-text ">HELLO</p>   
+    <!-- <div class="rounded-full md:w-[1248px] md:h-[1248px] sm:w-[509px] sm:h-[509px] bg-[#252525] absolute md:-right-[28.5rem] sm:-right-[10rem] z-10  md:-top-40 sm:top-[40rem]"></div> -->
+    <div class="container mx-auto md:flex text-white font-nav relative z-20 justify-between">
         <div class=" pt-[182px]">
             <p class="text-yellow-500 md:text-xs lg:text-sm">Hello Everyone  👋 </p>
             <h1 class="font-bold text-[96px] ">I’am Nugraha</h1>
@@ -68,7 +82,7 @@
             </div>
         </div> 
         <div class="flex">
-            <img class="md:pt-8" src="Mask Group.png" alt="">
+            <img class="md:pt-8 hover:opacity-30" src="picture.png" alt="">
             <div class="md:py-10 md:pl-60 flex">
                 <div class="items-center text-white flex flex-col gap-4 ">
                     <div class="relative h-full hidden md:block">
@@ -86,12 +100,11 @@
                 </div>
             </div>
         </div>
-        
-    </div>
+        </div>
     <!-- ABOUTME -->
     <div class="rounded-full w-[30rem] h-[30rem] bg-[#252525] absolute z-20 md:top-[55rem] -left-[2rem] gradient"></div>
     <p class="absolute text-[240px] font-bold -right-[20rem] py-[10rem] gradient-text z-40">About Me</p>
-   <div class="rounded w-full h-[10rem] bg-[#0E0E0E] -z-10 absolute"></div>
+    <div class="rounded w-full h-[10rem] bg-[#0E0E0E] -z-10 absolute"></div>
     <div class="container mx-auto md:flex pt-[160px] font-base">
         <p class="text-yellow-500 text-center z-40 pt-14">About Me</p>
         <div class=" text-white w-[40rem] md:pl-[145px] z-40 pt-20">
@@ -130,7 +143,7 @@
     <section class="text-center text-white font-nav py-40 container mx-auto z-50">
         <div class="py-20">
             <p class=" text-[16px] text-yellow-500"> Experience</p>
-            <h1 class="text-[40px] font-bold z-50">The experience that made <br> Me who I am today</h1>
+            <h1 class="text-[40px] font-bold">The experience that made <br> Me who I am today</h1>
             <p class="text-[14px] text-[#B8B8B8]">Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap <br> ghosta. Pisade monosion tiles. </p>  
         </div>
         <div class=" md:flex pt-80 gap-[10rem] ">
@@ -141,7 +154,7 @@
             </div>
             <div>
                 <p class=" text-[16px] text-yellow-500">Research Engineer</p>
-                <p class="px-2 border-2 bg-white text-black w-[] rounded-full ">Jul 2017 - Des 2017</p>
+                <p class="px-2 border-2 bg-white text-black rounded-full ">Jul 2017 - Des 2017</p>
                 <p class="text-[14px]">Ebizu</p>
             </div>
             <div>
@@ -172,14 +185,14 @@
         </div>
     </section>
     <!-- SKILL -->
-    <p class="absolute text-[240px] font-bold -left-[10rem] gradient-text Z-10">Skills</p>
+    <p class="absolute text-[240px] font-bold -left-[10rem] gradient-text Z-10 ">Skills</p>
         <div class="container mx-auto text-white md:flex font-nav py-60">
             <div class="pt-8 ">
                 <p class=" text-[16px] text-yellow-500"> Skills Possessed</p>
-                <h1 class="text-[40px] font-bold">Skills that I have Mastered</h1>
+                <h1 class="text-[40px] font-bold ms:py-[12px]">Skills that I have Mastered</h1>
                 <p class="text-[14px] text-slate-300">I have 10+ year experience with Software Engineering using <br> Python, PHP, Mysql/PostgreSQL, Javascript, Jquery, VueJS, <br> HTML/HTML5, CSS, SCSS, and many more.</p>
             </div>
-            <div class="flex md:pl-14 sm:py-6">
+            <div class="flex md:pl-14 sm:pt-[18px]">
                 <a href=""><img class="mt-20 hover:bg-white" src="css.png" alt=""></a>
                 <a href=""><img class="hover:bg-white"" src="js.png" alt=""></a>
                 <a href=""><img class="mt-20 hover:bg-white"" src="html.png" alt=""></a>
@@ -192,34 +205,33 @@
     <!-- PROJECT -->
     
     <p class="absolute text-[240px] font-bold md:-right-[20rem] gradient-text -z-10">Project Work</p>
-    <section class="container mx-auto text-white py-60">
+    <section class="container mx-auto text-white md:py-60 sm:py-20">
         <p class="text-yellow-500">Complite Project</p>
-        <h1 class="text-[40px] font-bold">Project Work</h1>
+        <h1 class="text-[40px] font-bold sm:py-[12px]">Project Work</h1>
         <p class="text-[14px] text-slate-300">Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol <br> jertad tede. Deteskap ghosta. Pisade monosion tiles. Hexav nide <br> och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta.</p>
         <button disabled="disabled"></button>
         <div class=" md:flex font-nav gap-6">
-            <div class="md:w-1/2 md:h-1/2 " >
+            <div class="md:w-1/2 md:h-1/2" >
                 <img class="w-[800px] h-[400px]" src="projek1.png" alt="">
-                <h1 class="text-[24px]">CMS | Center For Migration Studies</h1>
-                <p class="text-[14px] text-slate-300"> www.cmscenterformigrationstudies.0rg</p>
-                <img class="w-[800px] h-[400px]" src="projek3.png" alt="">
-                <h1 class="text-[24px]">ITPI | In The Public Interest</h1>
-                <p class="text-[14px] text-slate-300"> www.itps.org</p>
+                <h1 class="text-[24px] sm:py-[12px] ">CMS | Center For Migration Studies</h1>
+                <p class="text-[14px] text-slate-300 pb-[24px]"> www.cmscenterformigrationstudies.0rg</p>
+                <img class="w-[800px] h-[400px] " src="projek3.png" alt="">
+                <h1 class="text-[24px] sm:py-[12px]">ITPI | In The Public Interest</h1>
+                <p class="text-[14px] text-slate-300 pb-[24px]"> www.itps.org</p>
             </div>
             <div class="md:w-1/2 md:h-1/2">
                 <img class="w-[800px] h-[400px]" src="projek2.png" alt="">
-                <h1 class="text-[24px]">Voces de la Frontera</h1>
-                <p class="text-[14px] text-slate-300"> www.vocesdelafrontera.org</p>
-    
-                <img class="w-[800px] h-[400px]" src="projek4.png" alt="">
-                <h1 class="text-[24px]">CHANGEWIRE</h1>
-                <p class="text-[14px] text-slate-300">www.changewire.com </p>
+                <h1 class="text-[24px] sm:py-[12px] ">Voces de la Frontera</h1>
+                <p class="text-[14px] text-slate-300 pb-[24px]"> www.vocesdelafrontera.org</p>
+                <img class="w-[800px] h-[400px] " src="projek4.png" alt="">
+                <h1 class="text-[24px] sm:py-[12px]">CHANGEWIRE</h1>
+                <p class="text-[14px] text-slate-300 pb-[24px]">www.changewire.com </p>
             </div>
 
         </div>
     </section>
     <!-- SENDME --> 
-        <div class="container max-auto py-20 text-white font-nav">
+        <div class="container max-auto py-20 text-white font-nav ">
             <div class="text-center">
                 <p class="text-yellow-500 text-[14px] "> Send Me a Message </p>
                 <h1 class="text-[40px]">Just say hello</h1>
@@ -258,7 +270,7 @@
             </div>
             <p class="text-[14px] font-base pb-6">©Mangcoding 2022. All rights reserved.</p>
         </div>
-
     </div>
+    
 </body>
 </html>
