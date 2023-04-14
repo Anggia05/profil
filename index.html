@@ -9,7 +9,9 @@
     <script src="./tailwind.config.js"></script>
     <style type="text/tailwindcss"></style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
+
         .gradient {
             background: linear-gradient(33.65deg, #0A0A0A 13.42%, #1C1C1C 50%);
         }
@@ -20,32 +22,47 @@
             background-clip: text;
             text-fill-color: transparent;
             opacity: 0.1;}
+
+        .wrapper-filter-image:hover .filter-image{
+            filter: saturate(100%);
+        }
+        .filter-image {
+            filter: saturate(0);
+        }
+        #card-wrapper:hover .wrapper-text{
+            display: block;
+        }
+        #card-wrapper .wrapper-text{
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-[#0E0E0E]">
     <!-- HEADER --> 
-    <header>
-        
-<nav class="">
-    <div class="flex flex-wrap items-center justify-between mx-auto container border-b-2 border-[#B8B8B8]">
-        <a href=""><img src="logo.png" alt=""></a>
-        <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
-            <ul class="flex flex-col p-4 md:p-0 mt-4 border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 gap-5">
-            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
-            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a></li>
-            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Project</a></li>
-            <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
-            </ul>
+    <header class="sticky">
+    <nav class="container mx-auto sticky ">
+        <div class="flex flex-wrap items-center z-40 justify-between py-2 rounded-0 border-b border-[#B8B8B8]">
+            <a href=""><img src="logo.png" alt=""></a>
+            <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 gap-5">
+                    <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a></li>
+                    <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a></li>
+                    <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Project</a></li>
+                    <li><a href="#" class="block py-2 pl-3 pr-4 text-[#B8B8B8] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex gap-2 items-center hidden md:block  ">
+                <a class="text-slate-300" href="">Let’s talk</a>
+                <!-- <a href=""><img class="hover:bg-white" src="arrow-right.svg" alt=""></a> -->
+                <div class="h-[40px] w-[40px] bg-white border-2 rounded-full items-center flex hover:bg-[#FFAA29] hover:text-white "style="right:100%; transform:rotate(-45deg)">
+                    <i class="mx-auto fa-sharp fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
         </div>
-        <div class="flex gap-2 items-center hidden md:block  ">
-            <a class="text-slate-300" href="">Let’s talk</a>
-            <a href=""><img class="hover:bg-white" src="simbol.png" alt=""></a>
-        </div>
-    </div>
-  </nav>
+    </nav>
   
         <!-- <div class="border-b-2 border-[#B8B8B8] container mx-auto text-[#B8B8B8] flex justify-between items-center  font-base relative z-40 justify-between ">
             <a href=""><img src="logo.png" alt=""></a>
@@ -62,45 +79,69 @@
         </div> -->
     </header>
     <!-- PROFIL -->
-    <p class="absolute md:text-[240px] sm:text-[200px] font-bold md:right-[2rem] sm:top-[22rem] md:-top-[2px] sm:pl-4 py-[10rem] font-nav -z-10 gradient-text ">HELLO</p>   
-    <!-- <div class="rounded-full md:w-[1248px] md:h-[1248px] sm:w-[509px] sm:h-[509px] bg-[#252525] absolute md:-right-[28.5rem] sm:-right-[10rem] z-10  md:-top-40 sm:top-[40rem]"></div> -->
-    <div class="container mx-auto md:flex text-white font-nav relative z-20 justify-between">
+    <!-- <p class="absolute md:text-[240px] sm:text-[200px] font-bold md:right-[2rem] sm:top-[22rem] md:-top-[2px] sm:pl-4 md:py-[4rem] sm:-right-2 lg:right-[25rem] sm:py-[10rem] font-thame -z-10 gradient-text ">HELLO</p>   
+    <div class="rounded-full md:w-[948px] md:h-[948px] sm:w-[509px] sm:h-[509px] bg-[#252525] absolute md:-right-[28.5rem] sm:-right-[10rem] -z-20  md:-top-40 sm:top-[40rem]"></div> -->
+    <div class="container mx-auto md:flex text-white font-nav relative justify-betwee">
         <div class=" pt-[182px]">
-            <p class="text-yellow-500 text-[16px]">Hello Everyone  👋 </p>
-            <h1 class="font-bold lg:text-[96px] sm:text-[48px]">I’am Nugraha</h1>
+            <p class="text-[#FFAA29] text-[16px] font-nav" >Hello Everyone  👋 </p>
+            <h1 class="font-bold font-nav w-[40rem] lg:text-[96px] sm:text-[48px]"style="font-weight: 700;">I’am Nugraha</h1>
             <p class="text-[#B8B8B8] w-[25rem] font-base md:text-xs lg:text-sm">Introduce self Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta. Pisade monosion tiles. Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta. Pisade monosion tiles.</p>
             <div class="flex items-center md:text-xs lg:text-sm py-[35.5px] ">
-                <p class="">Let’s talk</p>
-                <a href=""><img class="px-2 hover:bg-white" src="symbol1.png" alt=""></a>
+                <p class="pr-2">Let’s talk</p>
+                <div class="h-[40px] w-[40px] text-black bg-white border-2 rounded-full items-center flex hover:bg-[#FFAA29] hover:text-white "style="right:100%; transform:rotate(-45deg)">
+                    <i class="mx-auto fa-sharp fa-solid fa-arrow-right"></i>
+                </div>
             </div>
-            <div>
-                <img src="Vector (1).png " alt="">
-                <p class="  text-[10px] absolute whitespace-nowrap" style="right:100%;transform: translate(60%, 250%) rotate(90deg)  ">Scroll down</p>
+            <div class="text-center" >
+                <img src="Vector (1).png "  alt="">
+                <p class="  text-[10px] absolute whitespace-nowrap px-40 " style="right:100%;transform: translate(60%, 250%) rotate(90deg)  ">Scroll down</p>
             </div>
         </div> 
-        <div class="flex">
-            <img class="md:pt-8 hover opacity-30 " src="picture.png" alt="">
-            <div class="md:py-10 md:pl-60 flex">
-                <div class="items-center text-white flex flex-col gap-4 ">
+        <div class="">
+            <div class="flex">
+                <!-- Latar Belakang I -->
+                <div class="lg:pl-60 lg:py-6 ">
+                    <p class="absolute md:text-[260px] sm:text-[200px] font-bold md:right-[2rem] sm:top-[22rem] lg:-top-[5rem] sm:pl-4 md:py-[3rem] sm:-right-2 lg:right-[13rem] sm:py-[10rem] font-nav -z-20 gradient-text" style="font-weight: 900;">HELLO</p>   
+                    <div class="rounded-full md:w-[948px] md:h-[948px] sm:w-[509px] sm:h-[509px] bg-[#252525] absolute md:-right-[30rem] sm:-right-[10rem] -z-40  md:-top-40 sm:top-[40rem]"></div>
+                    <img class="grayscale hover:filter-none mx-auto px-4" src="picture.png" alt="">
+                    <div class="rounded w-full bg-[#0E0E0E] pt-[10rem] top-[24rem] absolute" style="background: linear-gradient(179.41deg, rgba(19, 19, 19, 0) 0.51%, #0E0E0E 99.49%);"></div>
+                    <div class="rounded w-full bg-[#0E0E0E] pt-[20rem] top-[34rem] absolute"></div>
+                </div>
+
+                <div class="items-center text-white flex flex-col gap-4  ">
                     <div class="relative h-full hidden md:block">
-                        <p class="text-[14px] absolute whitespace-nowrap" style="left: 50%;transform: translate(-50%, 250%) rotate(90deg) ;" >Follow me in</p>
+                        <p class="text-[14px] absolute whitespace-nowrap pt-[22px] pl-20" style="left: 50%;transform: translate(-50%, 250%) rotate(90deg) ;" >Follow me in</p>
                     </div>
-                    <div class="wrapper-dot flex flex-col ">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a href=""><img class="" src="github.png" alt=""></a>
+                    <div class="wrapper-dot flex flex-col gap-2 items-center pr-4 pb-[12.5rem]">
+                        <div class="h-[8px] w-[8px] border-2 rounded-full hidden md:block"></div>
+                        <div class="h-[8px] w-[8px] border-2 rounded-full hidden md:block"></div>
+                        <div class="h-[8px] w-[8px] border-2 rounded-full hidden md:block"></div>
+                        <div class="gap-[1rem] flex flex-col " >
+                            <div class="h-[40px] w-[40px] border-2 rounded-full items-center flex"> 
+                                <i class="mx-auto fa-brands fa-github fa-lg"></i>
+                            </div>
+                            <div class="h-[40px] w-[40px] border-2 rounded-full items-center flex">
+                                <i class="fa-brands fa-twitter fa-lg mx-auto"></i>
+                            </div>
+                            <div class="h-[40px] w-[40px] border-2 rounded-full items-center flex">
+                                <i class="fa-brands fa-linkedin-in fa-lg mx-auto"></i>
+                            </div>
+                            <div class="h-[40px] w-[40px] border-2 rounded-full items-center flex">
+                                <i class="fa-brands fa-instagram fa-lg mx-auto"></i>
+                            </div>
+                        </div>
+                </div>
+                    <!-- <a href=""><img class="" src="github.png" alt=""></a>
                     <a href=""><img src="twiter.png" alt=""></a>
                     <a href=""><img src="linkind.png" alt=""></a>
-                    <a href=""><img src="instagram.png" alt=""></a>
+                    <a href=""><img src="instagram.png" alt=""></a> -->
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     <!-- ABOUTME -->
     <div class="rounded-full w-[30rem] h-[30rem] bg-[#252525] absolute z-20 md:top-[55rem] -left-[2rem] gradient"></div>
-    <p class="absolute text-[240px] font-bold -right-[20rem] py-[10rem] gradient-text z-40">About Me</p>
+    <p class="absolute text-[240px] font-bold -right-[20rem] py-[10rem] gradient-text z-40 " style="font-weight: 800;">About Me</p>
     <div class="rounded w-full h-[10rem] bg-[#0E0E0E] -z-10 absolute"></div>
     <div class="container mx-auto md:flex pt-[160px] font-base">
         <p class="text-yellow-500 text-center z-40 pt-14">About Me</p>
@@ -112,77 +153,94 @@
         </div>
     <!-- SPECIALIST-->
     <div class="rounded-full w-[40rem] h-[40rem] bg-[#252525] absolute top-[88rem] gradient -right-[8rem] "></div>
-    <p class="absolute text-[240px] font-bold -left-[10rem] py-[10rem] gradient-text -z-10">Specialist</p>
+    <p class="absolute text-[240px] font-bold -left-[10rem] py-[10rem] gradient-text -z-10" style="font-weight: 800;">Specialist</p>
         <div class="container mx-auto pt-[18rem] ">
             <div class="text-white font-nav py-20 z-50">
                 <p class="text-yellow-500">Specialist</p>
                 <h1 class="text-[40px] font-bold">Specialist Focus Project</h1>
                 <p class="text-[14px] text-[#B8B8B8]">Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol <br> jertad tede. Deteskap ghosta. Pisade monosion tiles. Hexav nide <br> och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta.</p>
             </div>
-            <div class="font-nav md:flex text-white gap-[24px] pt-8 gap-6 font-bold font-base">
-                <div class="bg-[#2C2C2C] rounded-lg md:w-1/3 h-[210px] p-[24px] relative">
+            <div class="font-nav md:flex text-white ms:flex ms:flex-col pt-8 gap-4  font-base">
+                <div id="card-wrapper" class="bg-[#2C2C2C] rounded-lg md:w-1/3 sm:h-[210px] p-[24px] hover:h-[21rem] relative">
                     <img class="absolute top-5 right-2" src="Shopify logo.png " alt="">
-                    <p class=" text-[24px] w-[240px] absolute bottom-2 ">Shopify Theme Development</p>
+                    <p class=" text-[24px] w-[240px] pt-[7rem] font-bold">Shopify Theme Development</p>
+                    <p class="wrapper-text py-2" >Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta. Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta.</p>
                 </div>
-                <div class="bg-[#2C2C2C] rounded-lg md:w-1/3 h-[210px] p-[24px] relative">
+                
+                <div id="card-wrapper" class="bg-[#2C2C2C] rounded-lg md:w-1/3 sm:h-[210px] p-[24px] hover:h-[21rem] relative">
                     <img class="absolute top-5 right-2"  src="WordPress logo.png" alt="">
-                    <p class="text-[24px] w-[240px] absolute bottom-2">WordPress Theme Development</p>
+                    <p class="text-[24px] w-[240px] pt-[7rem] font-bold">WordPress Theme Development</p>
+                    <p class="wrapper-text py-2" >Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta. Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta.</p>
                 </div>
-                <div class="bg-[#2C2C2C] rounded-lg md:w-1/3 h-[210px] p-[24px] relative">
+                <div id="card-wrapper" class="bg-[#2C2C2C] rounded-lg md:w-1/3 sm:h-[210px] p-[24px] hover:h-[21rem] relative">
                     <img class="absolute top-5 right-2"  src="Laravel logo.png" alt="">
-                    <p class="text-[24px] w-[240px] absolute bottom-2">Laravel Theme Development</p>
+                    <p class="text-[24px] w-[240px] pt-[7rem] font-bold">Laravel Theme Development</p>
+                    <p class="wrapper-text py-2" >Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta. Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta.</p>
                 </div>
             </div>
         </div>
+
+        <!-- <section>
+            <div class="bg-[#2C2C2C] rounded-lg md:w-1/3 h-[210px] p-[24px] relative text-white container mx-auto">
+                <img class="absolute top-5 right-2"  src="Laravel logo.png" alt="">
+                <!-- <p class="text-[24px] w-[240px] absolute bottom-2 font-bold">Laravel Theme Development</p> -->
+                <!-- <button  data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white rounded-lg text-sm px-4 py-2.5 text-center items-center text-[24px] w-[240px] absolute bottom-2 font-bold" type="button">Dropdown hover <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns=">"></path></svg></button>
+                <div id="dropdownHover" class="z-10 hidden bg-[#2C2C2C]  ">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-white dark:hover:bg-gray-600 ">Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta. Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap ghosta.</a>
+                    </li>
+                </div>
+            </div>
+
+        </section> --> 
     <!-- EXPERIENCE -->
     <div class="rounded-full w-[45rem] h-[45rem] bg-[#252525] absolute -z-10 top-[140rem] -left-[25rem] gradient"></div>
-    <p class="absolute text-[240px] font-bold -right-[30rem] py-[2rem] gradient-text -z-10">Experience</p>
-    <section class="text-center text-white font-nav py-40 container mx-auto z-50">
-        <div class="py-20">
+    <p class="absolute text-[240px] font-bold -right-[30rem] py-[2rem] gradient-text -z-10" style="font-weight: 800;">Experience</p>
+    <section class="text-center text-white font-nav py-20 container mx-auto ">
+        <div class="pt-14">
             <p class=" text-[16px] text-yellow-500"> Experience</p>
             <h1 class="text-[40px] font-bold">The experience that made <br> Me who I am today</h1>
-            <p class="text-[14px] text-[#B8B8B8]">Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap <br> ghosta. Pisade monosion tiles. </p>  
+            <p class="text-[14px] text-[#B8B8B8] pb-14">Pisade monosion tiles. Hexav nide och tiling. Megapp trad. Ol jertad tede. Deteskap <br> ghosta. Pisade monosion tiles. </p>  
         </div>
-        <div class=" md:flex pt-80 gap-[10rem] ">
-            <div class="wrapper-dot wrapper-dot flex flex-col mt-60" >
-                <p class=" text-[16px] text-yellow-500">Web Engineer</p>
-                <p class="px-2 border-2 bg-white text-black rounded-full ">Sep 2008 - Jul 2012</p>
-                <p class="text-[14px]">PT Surya Lintas Global</p>
+        <div class=" lg:flex lg:gap-[9rem] sm:gap-[17rem] justify-center items-center">
+            <div class="flex flex-col lg:pt-[40rem] pl-4 " >
+                <p class="text-[16px] text-yellow-500">Web Engineer</p>
+                <p class="w-[162px] h-[36px] border-2 bg-white text-black rounded-full mx-auto ">Sep 2008 - Jul 2012</p>
+                <p class="text-[14px] py-4">PT Surya Lintas Global</p>
+                <div class="h-[22px] mx-auto w-[22px] border-2 rounded-full z-50" style="background: linear-gradient(33.65deg, #0A0A0A 13.42%, #1C1C1C 50%);"></div>
             </div>
-            <div>
-                <p class=" text-[16px] text-yellow-500">Research Engineer</p>
-                <p class="px-2 border-2 bg-white text-black rounded-full ">Jul 2017 - Des 2017</p>
-                <p class="text-[14px]">Ebizu</p>
+            <div class="sm:pt-20 lg:pt-[30rem] ">
+                <p class="text-[16px] text-yellow-500">Research Engineer</p>
+                <p class="w-[162px] h-[36px] border-2 bg-white text-black rounded-full mx-auto ">Jul 2017 - Des 2017</p>
+                <p class="text-[14px] py-4">Ebizu</p>
+                <div class="h-[22px] mx-auto w-[22px] border-2 rounded-full z-50" style="background: linear-gradient(33.65deg, #0A0A0A 13.42%, #1C1C1C 50%);"></div>
             </div>
-            <div>
-                <p class=" text-[16px] text-yellow-500">Freelance Shopify Developer</p>
-                <p class="px-2 border-2 bg-white text-black rounded-full ">Sep 2021 - Apr 2022</p>
-                <p class="text-[14px]">SICEPAT EKSPRES INDONESIA</p>
-
+            <div class="sm:pt-20 lg:pt-[16.5rem]">
+                <p class="text-[16px] lg:w-[10rem] mx-auto text-yellow-500">Freelance Shopify Developer</p>
+                <p class="w-[162px] h-[36px] border-2 bg-white text-black rounded-full mx-auto">Sep 2021 - Apr 2022</p>
+                <p class="text-[14px] lg:w-[16rem] py-4">SICEPAT EKSPRES INDONESIA</p>
+                <div class="h-[22px] mx-auto w-[22px] border-2 rounded-full z-50" style="background: linear-gradient(33.65deg, #0A0A0A 13.42%, #1C1C1C 50%);"></div>
             </div>
-            <div>
+            <div class="sm:pt-20 lg:pt-[5rem]">
                 <p class=" text-[16px] text-yellow-500">Founder & Project Manager</p>
-                <p class="px-2 border-2 bg-white text-black rounded-full ">Jan 2022 - Now</p>
-                <p class="text-[14px]">Mangcoding</p>
-                <span class="dot"></span>
+                <p class="w-[162px] h-[36px] border-2 bg-white text-black rounded-full mx-auto ">Jan 2022 - Now</p>
+                <p class="text-[14px] py-4">Mangcoding</p>
+                <div class="h-[22px] mx-auto w-[22px] border-2 rounded-full " style="background: linear-gradient(33.65deg, #0A0A0A 13.42%, #1C1C1C 50%);"></div>
             </div>
-            <div>
+            <div class="sm:pt-20 lg:pb-[10rem]">
                 <p class=" text-[16px] text-yellow-500">Wordpress Theme Developer</p>
-                <p class="px-2 border-2 bg-white text-black rounded-full ">Sep 2018 - Now</p>
-                <p class="text-[14px]">IndieTech Solutions</p>
-                <span class="dot"></span>
+                <p class="w-[162px] h-[36px] border-2 bg-white text-black rounded-full mx-auto ">Sep 2018 - Now</p>
+                <p class="text-[14px] py-4">IndieTech Solutions</p>
+                <div class="h-[22px] mx-auto w-[22px] border-2 rounded-full" style="background: linear-gradient(33.65deg, #0A0A0A 13.42%, #1C1C1C 50%);"></div>
             </div>
+            <!-- <div class="lg:border-t-4 border-#A1A1A1 sm:absolute sm:border-l-2 h-[62rem]"></div> -->
         </div>
-        <div class="wrapper-dot md:flex gap-[20rem] pl-16 pt-4 absolute">
-            <span class="dot md:mt-80"></span>
-            <span class="dot md:mt-60"></span>
-            <span class="dot md:mt-40"></span>
-            <span class="dot md:mt-20"></span>
-            <span class="dot "></span>
+        <div class="flex sm:justify-center sm:items-center lg:justify-between lg:items-center lg:pl-[30rem] lg:pb-40 mx-auto px-4 lg:rotate-[75deg] ">
+            <div class="mx-auto border-#A1A1A1 h-[85rem] flex sm:justify-center lg:justify-between items-center absolute border-l-2  "></div>
         </div>
     </section>
     <!-- SKILL -->
-    <p class="absolute text-[240px] font-bold -left-[10rem] gradient-text Z-10 ">Skills</p>
+    <p class="absolute text-[240px] font-bold -left-[10rem] gradient-text Z-10" style="font-weight: 800;">Skills</p>
         <div class="container mx-auto text-white md:flex font-nav py-60">
             <div class="pt-8 ">
                 <p class=" text-[16px] text-yellow-500"> Skills Possessed</p>
@@ -190,12 +248,46 @@
                 <p class="text-[14px] text-slate-300">I have 10+ year experience with Software Engineering using <br> Python, PHP, Mysql/PostgreSQL, Javascript, Jquery, VueJS, <br> HTML/HTML5, CSS, SCSS, and many more.</p>
             </div>
             <div class="flex md:pl-14 sm:pt-[18px]">
-                <a href=""><img class="mt-20 hover:bg-white" src="css.png" alt=""></a>
-                <a href=""><img class="hover:bg-white"" src="js.png" alt=""></a>
-                <a href=""><img class="mt-20 hover:bg-white"" src="html.png" alt=""></a>
-                <a href=""><img class="mt-40 hover:bg-white"" src="php.png" alt=""></a>
-                <a href=""><img class="mt-20 hover:bg-white"" src="laravel.png" alt=""></a>
-                <a href=""><img class="hover:bg-white"" src="phyton.png" alt=""></a>
+                <!-- <div class="mt-20 h-[109px] w-[109px] border-2 rounded-full border-[#E7E7E7] items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <img src="layer1.png" class="mx-auto" style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);" alt="">
+                </div>
+                <div class="h-[109px] w-[109px] border-2 rounded-full border-[#E7E7E7] items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <img src="Javascript logo.png" class="mx-auto" style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);" alt="">
+                </div>
+                <div class="mt-20 h-[109px] w-[109px] border-2 rounded-full border-[#E7E7E7] items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <img src="HTML logo.png" class="mx-auto h-(72px) w-(63px) " style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);" alt="">
+                </div>
+                <div class="mt-40 h-[109px] w-[109px] border-2 rounded-full border-[#E7E7E7] items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <img src="php (2).png" class="h-(47px) w-(93px)" style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);" alt="">
+                </div> -->
+                <a href=""><img class="h-[109px] w-[109px] mt-20 hover:bg-white border-0 rounded-full" src="css.png" alt=""></a>
+                <a href=""><img class="h-[109px] w-[109px] hover:bg-white border-0 rounded-full" src="js.png" alt=""></a>
+                <a href=""><img class="h-[109px] w-[109px] mt-20 hover:bg-white border-0 rounded-full" src="html.png" alt=""></a>
+                <a href=""><img class="h-[109px] w-[109px] mt-40 hover:bg-white border-0 rounded-full" src="php.png" alt=""></a>
+                <!-- <div class="h-[109px] w-[109px] border-2 rounded-full items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <i class="mx-auto fa-brands fa-css3-alt"></i>
+                </div>
+                <div class="h-[109px] w-[109px] border-2 rounded-full items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <i class="mx-auto fa-brands fa-laravel"></i>
+                </div>
+                <div class="h-[109px] w-[109px] border-2 rounded-full items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <i class="mx-auto fa-brands fa-laravel"></i>
+                </div>
+                <div class="h-[109px] w-[109px] border-2 rounded-full items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <i class="mx-auto fa-brands fa-laravel"></i>
+                </div>
+                <div class="h-[109px] w-[109px] border-2 rounded-full items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <i class="mx-auto fa-brands fa-laravel"></i>
+                </div> -->
+                <div class="mt-20 h-[109px] w-[109px] border-2 rounded-full border-[#E7E7E7] items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black text-center">
+                    <div class="border-0 rounded-full h-[109px] w-[109px] flex items-center mx-auto" style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);">
+                        <i class="fa-brands fa-laravel"></i>
+                    </div>
+                </div>
+                <!-- <div class=" h-[109px] w-[109px] border-2 rounded-full border-[#E7E7E7] items-center flex p-5 text-7xl text-white hover:bg-white hover:text-black">
+                    <img src="python logo.png" class="mx-auto" style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);" alt="">
+                </div> -->
+                <a href=""><img class="h-[109px] w-[109px] hover:bg-white border-0 rounded-full" src="phyton.png" alt=""></a>
                 
             </div>
         </div>
@@ -248,7 +340,7 @@
                     <input class="bg-black border rounded-full sm:w-full p-2 pr-[10rem]" type="your name" placeholder="Laravel, Shopify, WordPress......" > 
                 </div>
             </div>
-            <p class="py-2">Description</p>
+            <p class="py-2 lg:pl-[22.5rem]">Description</p>
             <div class="flex justify-center">
                 <input class="bg-black border rounded-lg sm:w-full md:w-1/2 p-[15rem] pr-[20rem]" type="your name" placeholder="Description......" > 
             </div>
@@ -260,12 +352,24 @@
     <div class="bg-[#0B0B0B] ">
         <div class="container mx-auto text-white md:justify-between flex items-center flex-col-reverse lg:flex-row lg:flex-row-reverse text-center">
             <div class="flex gap-4 justify-center  ">
-                <a href=""><img src="github.png" alt=""></a>
+                <!-- <a href=""><img src="github.png" alt=""></a>
                 <a href=""><img src="twiter.png" alt=""></a>
                 <a href=""><img src="linkind.png" alt=""></a>
-                <a href=""><img src="instagram.png" alt=""></a>
+                <a href=""><img src="instagram.png" alt=""></a> -->
+                <div class="h-[40px] w-[40px] border rounded-full items-center flex"> 
+                    <i class="mx-auto fa-brands fa-github fa-lg"></i>
+                </div>
+                <div class="h-[40px] w-[40px] border rounded-full items-center flex">
+                    <i class="fa-brands fa-twitter fa-lg mx-auto"></i>
+                </div>
+                <div class="h-[40px] w-[40px] border rounded-full items-center flex">
+                    <i class="fa-brands fa-linkedin-in fa-lg mx-auto"></i>
+                </div>
+                <div class="h-[40px] w-[40px] border rounded-full items-center flex">
+                    <i class="fa-brands fa-instagram fa-lg mx-auto"></i>
+                </div>
             </div>
-            <p class="text-[14px] font-base pb-6">©Mangcoding 2022. All rights reserved.</p>
+            <p class="text-[14px] font-base sm:pb-6 lg:py-6 ">©Mangcoding 2022. All rights reserved.</p>
         </div>
     </div>
     
